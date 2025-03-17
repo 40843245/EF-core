@@ -1,4 +1,4 @@
-# Code First
+# Code First Migration
 ## intro
 Code First is a tool that migrates local database `localDB` by generating the code in `Migration` folder.
 
@@ -12,7 +12,7 @@ Step 1:
 
 Step 2:
 
-To enable migration, type command in Nuget Manager Console.
+To enable migration, type these commands in Nuget Manager Console.
 
 ```
 Enable-Migrations -ContextTypeName <contexTypeName>
@@ -27,6 +27,21 @@ where
 
 > [!NOTE]
 > If you want to auto migrate it, use `-EnableAutomaticMigrations`.
+
+Step 3: 
+
+To add migration, type these commands in Nuget Manager Console.
+
+```
+Add-Migration <migratedName>
+```
+
+where
+
+`<migratedName>` can be any descriptive name you want.
+
+> [!TIP]
+> To make the project more readable and maintainable, I recommend that you specify `<migratedName>` with a descriptive and readable name.
 
 ## examples
 ### example 1
@@ -60,7 +75,9 @@ namespace MediaManagerSystem.Data
 }
 ```
 
-I can type these command in Nuget Manager Console.
+Step 1:
+
+I can enable migrate `MediaManagerSystemContext` through these commands in Nuget Manager Console.
 
 ```
 Enable-Migrations -EnableAutomaticMigrations -ContextTypeName MediaManagerSystemContext
@@ -97,6 +114,16 @@ namespace MediaManagerSystem.Migrations
     }
 }
 ```
+
+Step 2:
+
+Then I can add migration to `MediaManagerSystemContext` through these commands.
+
+```
+Add-Migration MediaManagerSystemContextMigration
+```
+
+<img width="520" alt="image" src="https://github.com/user-attachments/assets/401c0eda-9047-4411-8fb8-931e5bdea5e2" />
 
 ## reference
 MSDS [Code First Migrations(in EF core6)](https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/migrations/?redirectedfrom=MSDN)
