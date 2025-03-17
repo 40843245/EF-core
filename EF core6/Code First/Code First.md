@@ -43,6 +43,18 @@ where
 > [!TIP]
 > To make the project more readable and maintainable, I recommend that you specify `<migratedName>` with a descriptive and readable name.
 
+Step 3:
+
+Update the database by these commands.
+
+```
+Update-Database
+```
+
+If it's okay, you should see like this
+
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/f7152b95-6a87-4a77-9cb7-5dc1682ac248" />
+
 ## examples
 ### example 1
 For example, I want to automatically migrate context `MediaManagerSystemContext` class.
@@ -124,6 +136,16 @@ Add-Migration MediaManagerSystemContextMigration
 ```
 
 <img width="520" alt="image" src="https://github.com/user-attachments/assets/401c0eda-9047-4411-8fb8-931e5bdea5e2" />
+
+Step 3:
+
+Then I update the database `MediaManagerSystemContext` by these commands. 
+
+```
+Update-Database
+```
+
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/7fa41c1c-1378-4d94-bc20-d4c72cf3622f" />
 
 ## reference
 MSDS [Code First Migrations(in EF core6)](https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/migrations/?redirectedfrom=MSDN)
