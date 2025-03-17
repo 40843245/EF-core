@@ -97,3 +97,6 @@ namespace MediaManagerSystem.Migrations
     }
 }
 ```
+
+## reference
+MSDS [Code First Migrations(in EF core6)](https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/migrations/?redirectedfrom=MSDN)
